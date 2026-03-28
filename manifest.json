@@ -1,0 +1,23 @@
+{
+  "name": "Alchemy Clash",
+  "short_name": "Alchemy Clash",
+  "description": "Fuse elements, craft cards, and battle in tactical lane combat.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1208",
+  "theme_color": "#c9a84c",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://placehold.co/192x192/1a1208/c9a84c?text=AC",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://placehold.co/512x512/1a1208/c9a84c?text=Alchemy+Clash",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

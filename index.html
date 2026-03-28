@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#1a1208">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Alchemy Clash: Fuse elements, craft cards, and battle in tactical lane combat.">
+
+    <title>Alchemy Clash</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP (global) -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Three.js via importmap -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three":          "https://unpkg.com/three@0.150.1/build/three.module.js",
+            "three/addons/":  "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="preloader-symbol">⚗️</div>
+        <div id="preloader-text">Preparing the Laboratory...</div>
+    </div>
+
+    <!-- UI Layer -->
+    <div id="ui-container" aria-label="Game UI"></div>
+
+    <!-- 3D Battle Scene -->
+    <div id="game-container" aria-label="3D Battle Arena"></div>
+
+    <!-- Main Entry -->
+    <script type="module" defer src="main.js"></script>
+
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.transition = 'opacity 0.6s ease';
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 600);
+            }
+        });
+    </script>
+</body>
+</html>
